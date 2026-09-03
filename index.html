@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Privacy Policy for Quiet Fast (断时 / 斷時).">
+  <title>断时 Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f7f7f5;
+      --surface: rgba(255, 255, 255, 0.78);
+      --text: #1e1e1e;
+      --secondary: rgba(30, 30, 30, 0.62);
+      --border: rgba(30, 30, 30, 0.12);
+      --selected: #1e1e1e;
+      --selected-text: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #111111;
+        --surface: rgba(28, 28, 30, 0.86);
+        --text: #ffffff;
+        --secondary: rgba(255, 255, 255, 0.64);
+        --border: rgba(255, 255, 255, 0.15);
+        --selected: #ffffff;
+        --selected-text: #111111;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(calc(100% - 32px), 760px);
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .mark {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--text);
+    }
+
+    .mark::after {
+      position: absolute;
+      inset: 0 50% 0 0;
+      background: var(--background);
+      content: "";
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    .language-picker {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 4px;
+      margin: 0 0 24px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .language-picker button {
+      min-height: 40px;
+      padding: 7px 10px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--secondary);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .language-picker button[aria-selected="true"] {
+      background: var(--selected);
+      color: var(--selected-text);
+    }
+
+    .policy {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .policy[hidden] {
+      display: none;
+    }
+
+    h2 {
+      margin: 30px 0 8px;
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--secondary);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: min(calc(100% - 24px), 760px);
+        padding-top: 28px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .policy {
+        padding: 20px;
+      }
+
+      .language-picker button {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <p class="brand-name">断时 / 斷時 / Quiet Fast</p>
+      </div>
+      <h1 id="page-title">隐私政策</h1>
+      <p class="meta" id="page-meta">生效日期：2026/9/1 · 开发者：YUFEICAI</p>
+    </header>
+
+    <nav class="language-picker" aria-label="Language">
+      <button type="button" data-language="zh-Hans" aria-selected="true">简体中文</button>
+      <button type="button" data-language="zh-Hant" aria-selected="false">繁體中文</button>
+      <button type="button" data-language="en" aria-selected="false">English</button>
+    </nav>
+
+    <article class="policy" data-policy="zh-Hans">
+      <h2>1. 我们处理的数据</h2>
+      <p>断时处理你主动创建的断食开始时间、结束时间、目标、完成状态，以及语言、外观、计时方式、提醒等 App 偏好。断食记录用于提供计时、历史统计、Widget、提醒、导入导出和你启用的 iCloud 同步；App 偏好只控制当前设备上的显示与行为。</p>
+
+      <h2>2. 数据如何存储与同步</h2>
+      <p>断食记录先保存在你的设备。开启 iCloud 同步后，记录通过 Apple CloudKit 保存在你的 iCloud 私有数据库，并在登录同一 Apple Account 的设备间同步。断时不要求注册账号，也不使用开发者自建服务器保存你的断食记录。</p>
+      <p>Widget 所需的当前状态快照保存在断时与 Widget 共用的 App Group 容器。提醒由设备上的 iOS 本地通知处理；通知内容是否显示在锁定屏幕等位置由你的系统通知设置决定。</p>
+
+      <h2>3. 导入与导出</h2>
+      <p>你可以导出包含断食记录的 JSON 文件，也可以选择文件导入。导出的文件由你选择的保存或分享位置管理；删除 App 内记录不会自动删除已导出的文件。</p>
+
+      <h2>4. 我们不做什么</h2>
+      <p>当前版本不接入广告、分析 SDK、跨 App 跟踪、HealthKit 或第三方账号，也不访问位置、通讯录、照片、相机或麦克风。断时不会出售你的记录，也不会将记录提供给广告商或数据经纪商。</p>
+      <p>Apple 可能为提供 iCloud、通知和 App Store 服务处理必要数据；相关处理适用 Apple 的隐私政策和服务条款。</p>
+
+      <h2>5. 数据保留、删除与选择</h2>
+      <p>记录会保留到你在 App 内删除。开启 iCloud 同步时，删除会同步到你的 iCloud 私有数据库；已导出的文件需要你在保存位置另行删除。</p>
+      <p>你可以随时关闭 iCloud 同步或在系统设置中更改通知权限。关闭同步只停止后续同步，不会删除本机或 iCloud 中已有的记录。</p>
+
+      <h2>6. 联系与政策更新</h2>
+      <p>如对隐私、数据处理或删除有疑问，请发送邮件至 <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>。</p>
+      <p>如果数据处理方式发生实质变化，我们会更新本政策、生效日期、App 内说明及 App Store Connect 隐私信息。</p>
+    </article>
+
+    <article class="policy" data-policy="zh-Hant" lang="zh-Hant" hidden>
+      <h2>1. 我們處理的資料</h2>
+      <p>斷時處理你主動建立的斷食開始時間、結束時間、目標、完成狀態，以及語言、外觀、計時方式、提醒等 App 偏好。斷食記錄用於提供計時、歷史統計、Widget、提醒、匯入匯出和你啟用的 iCloud 同步；App 偏好只控制目前裝置上的顯示與行為。</p>
+
+      <h2>2. 資料如何儲存與同步</h2>
+      <p>斷食記錄會先儲存在你的裝置。開啟 iCloud 同步後，記錄會透過 Apple CloudKit 儲存在你的 iCloud 私有資料庫，並在登入同一 Apple Account 的裝置之間同步。斷時不要求註冊帳號，也不使用開發者自建伺服器儲存你的斷食記錄。</p>
+      <p>Widget 所需的目前狀態快照會儲存在斷時與 Widget 共用的 App Group 容器。提醒由裝置上的 iOS 本機通知處理；通知內容是否顯示在鎖定畫面等位置，由你的系統通知設定決定。</p>
+
+      <h2>3. 匯入與匯出</h2>
+      <p>你可以匯出包含斷食記錄的 JSON 檔案，也可以選擇檔案匯入。匯出的檔案由你選擇的儲存或分享位置管理；刪除 App 內記錄不會自動刪除已匯出的檔案。</p>
+
+      <h2>4. 我們不會做什麼</h2>
+      <p>目前版本不接入廣告、分析 SDK、跨 App 追蹤、HealthKit 或第三方帳號，也不存取位置、聯絡人、照片、相機或麥克風。斷時不會出售你的記錄，也不會將記錄提供給廣告商或資料仲介商。</p>
+      <p>Apple 可能為提供 iCloud、通知和 App Store 服務處理必要資料；相關處理適用 Apple 的隱私權政策與服務條款。</p>
+
+      <h2>5. 資料保留、刪除與選擇</h2>
+      <p>記錄會保留到你在 App 內刪除。開啟 iCloud 同步時，刪除會同步到你的 iCloud 私有資料庫；已匯出的檔案需要你在儲存位置另行刪除。</p>
+      <p>你可以隨時關閉 iCloud 同步，或在系統設定中更改通知權限。關閉同步只會停止後續同步，不會刪除本機或 iCloud 中已有的記錄。</p>
+
+      <h2>6. 聯絡與政策更新</h2>
+      <p>如對隱私、資料處理或刪除有疑問，請傳送電子郵件至 <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>。</p>
+      <p>如果資料處理方式發生實質變更，我們會更新本政策、生效日期、App 內說明及 App Store Connect 隱私資訊。</p>
+    </article>
+
+    <article class="policy" data-policy="en" lang="en" hidden>
+      <h2>1. Data We Process</h2>
+      <p>Quiet Fast processes the fasting start time, end time, target, and completion status that you create, along with app preferences such as language, appearance, timer mode, and reminders. Fasting records are used to provide timing, history and statistics, widgets, reminders, import and export, and iCloud sync when you enable it. App preferences only control display and behavior on the current device.</p>
+
+      <h2>2. Storage and Sync</h2>
+      <p>Fasting records are stored on your device first. When iCloud sync is enabled, records are stored in your private iCloud database through Apple CloudKit and synced between devices signed in to the same Apple Account. Quiet Fast does not require an account and does not store your fasting records on a developer-operated server.</p>
+      <p>The current-state snapshot required by widgets is stored in an App Group container shared by Quiet Fast and its widgets. Reminders are handled through local iOS notifications on your device. Whether notification content appears on the Lock Screen or elsewhere is controlled by your system notification settings.</p>
+
+      <h2>3. Import and Export</h2>
+      <p>You can export a JSON file containing fasting records and choose a file to import. Exported files are managed by the storage or sharing location you select. Deleting records in the app does not automatically delete exported files.</p>
+
+      <h2>4. What We Do Not Do</h2>
+      <p>The current version does not include advertising, analytics SDKs, cross-app tracking, HealthKit, or third-party accounts, and it does not access location, contacts, photos, camera, or microphone. Quiet Fast does not sell your records or provide them to advertisers or data brokers.</p>
+      <p>Apple may process data necessary to provide iCloud, notification, and App Store services. That processing is governed by Apple's privacy policy and service terms.</p>
+
+      <h2>5. Retention, Deletion, and Your Choices</h2>
+      <p>Records remain until you delete them in the app. When iCloud sync is enabled, deletions sync to your private iCloud database. Exported files must be deleted separately from the location where you saved them.</p>
+      <p>You can disable iCloud sync at any time or change notification permission in System Settings. Disabling sync stops future synchronization but does not delete records already stored on the device or in iCloud.</p>
+
+      <h2>6. Contact and Policy Updates</h2>
+      <p>For questions about privacy, data processing, or deletion, email <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>.</p>
+      <p>If our data practices materially change, we will update this policy, its effective date, the in-app notice, and the App Store Connect privacy information.</p>
+    </article>
+
+    <footer>No analytics · No cookies · No tracking</footer>
+  </main>
+
+  <script>
+    const metadata = {
+      "zh-Hans": {
+        title: "隐私政策",
+        meta: "生效日期：2026/9/1 · 开发者：YUFEICAI"
+      },
+      "zh-Hant": {
+        title: "隱私權政策",
+        meta: "生效日期：2026/9/1 · 開發者：YUFEICAI"
+      },
+      "en": {
+        title: "Privacy Policy",
+        meta: "Effective date: September 1, 2026 · Developer: YUFEICAI"
+      }
+    };
+
+    const buttons = [...document.querySelectorAll("[data-language]")];
+    const policies = [...document.querySelectorAll("[data-policy]")];
+
+    function showLanguage(language) {
+      const selected = metadata[language] ? language : "zh-Hans";
+      document.documentElement.lang = selected;
+      document.title = `${metadata[selected].title} · Quiet Fast`;
+      document.querySelector("#page-title").textContent = metadata[selected].title;
+      document.querySelector("#page-meta").textContent = metadata[selected].meta;
+      buttons.forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.language === selected));
+      });
+      policies.forEach((policy) => {
+        policy.hidden = policy.dataset.policy !== selected;
+      });
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", selected);
+      window.history.replaceState({}, "", url);
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => showLanguage(button.dataset.language));
+    });
+
+    const queryLanguage = new URLSearchParams(window.location.search).get("lang");
+    const browserLanguage = navigator.language.startsWith("zh-Hant") || ["zh-TW", "zh-HK", "zh-MO"].includes(navigator.language)
+      ? "zh-Hant"
+      : navigator.language.startsWith("zh")
+        ? "zh-Hans"
+        : "en";
+    showLanguage(queryLanguage || browserLanguage);
+  </script>
+</body>
+</html>
