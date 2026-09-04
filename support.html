@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Help and support for Quiet Fast (断时 / 斷時).">
+  <title>断时 Help &amp; Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f7f7f5;
+      --surface: rgba(255, 255, 255, 0.78);
+      --text: #1e1e1e;
+      --secondary: rgba(30, 30, 30, 0.62);
+      --border: rgba(30, 30, 30, 0.12);
+      --selected: #1e1e1e;
+      --selected-text: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #111111;
+        --surface: rgba(28, 28, 30, 0.86);
+        --text: #ffffff;
+        --secondary: rgba(255, 255, 255, 0.64);
+        --border: rgba(255, 255, 255, 0.15);
+        --selected: #ffffff;
+        --selected-text: #111111;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(calc(100% - 32px), 760px);
+      margin: 0 auto;
+      padding: 48px 0 72px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .mark {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--text);
+    }
+
+    .mark::after {
+      position: absolute;
+      inset: 0 50% 0 0;
+      background: var(--background);
+      content: "";
+    }
+
+    .brand-name {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 650;
+      line-height: 1.2;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      margin: 0;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    .language-picker {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 4px;
+      margin: 0 0 24px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .language-picker button {
+      min-height: 40px;
+      padding: 7px 10px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--secondary);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .language-picker button[aria-selected="true"] {
+      background: var(--selected);
+      color: var(--selected-text);
+    }
+
+    .support {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .support[hidden] {
+      display: none;
+    }
+
+    h2 {
+      margin: 30px 0 8px;
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--secondary);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: min(calc(100% - 24px), 760px);
+        padding-top: 28px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .support {
+        padding: 20px;
+      }
+
+      .language-picker button {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <p class="brand-name">断时 / 斷時 / Quiet Fast</p>
+      </div>
+      <h1 id="page-title">帮助与支持</h1>
+      <p class="meta" id="page-meta">开发者：YUFEI CAI</p>
+    </header>
+
+    <nav class="language-picker" aria-label="Language">
+      <button type="button" data-language="zh-Hans" aria-selected="true">简体中文</button>
+      <button type="button" data-language="zh-Hant" aria-selected="false">繁體中文</button>
+      <button type="button" data-language="en" aria-selected="false">English</button>
+    </nav>
+
+    <article class="support" data-support="zh-Hans">
+      <h2>联系我们</h2>
+      <p>如在使用断时时遇到问题，请发送邮件至 <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>。</p>
+      <p>为便于定位问题，可以附上 App 版本、iOS 版本、问题现象和复现步骤。请勿发送不必要的健康信息或完整数据导出文件。</p>
+
+      <h2>iCloud 同步</h2>
+      <p>在“设置 → 数据与安全”中检查 iCloud 同步状态。关闭同步不会删除本机或 iCloud 中已有的记录；重新开启后，App 会继续使用你的 iCloud 私有数据库同步。</p>
+
+      <h2>提醒与桌面小组件</h2>
+      <p>提醒可在“设置 → 提醒”中管理；系统通知权限可前往 iOS 设置调整。桌面小组件的添加和显示方式说明位于“设置 → 偏好 → 桌面小组件”。</p>
+
+      <h2>导入、导出与隐私</h2>
+      <p>数据导入和导出位于“设置 → 数据与安全”。有关数据存储、同步和删除方式，请查看<a id="privacy-link-zh-Hans" href="index.html?lang=zh-Hans">隐私政策</a>。</p>
+    </article>
+
+    <article class="support" data-support="zh-Hant" lang="zh-Hant" hidden>
+      <h2>聯絡我們</h2>
+      <p>如在使用斷時時遇到問題，請傳送電子郵件至 <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>。</p>
+      <p>為便於定位問題，可以附上 App 版本、iOS 版本、問題現象和重現步驟。請勿傳送不必要的健康資訊或完整資料匯出檔案。</p>
+
+      <h2>iCloud 同步</h2>
+      <p>請在「設定 → 資料與安全」中檢查 iCloud 同步狀態。關閉同步不會刪除本機或 iCloud 中已有的記錄；重新開啟後，App 會繼續使用你的 iCloud 私有資料庫同步。</p>
+
+      <h2>提醒與桌面小工具</h2>
+      <p>提醒可在「設定 → 提醒」中管理；系統通知權限可前往 iOS 設定調整。桌面小工具的加入和顯示方式說明位於「設定 → 偏好 → 桌面小工具」。</p>
+
+      <h2>匯入、匯出與隱私</h2>
+      <p>資料匯入和匯出位於「設定 → 資料與安全」。有關資料儲存、同步和刪除方式，請查看<a id="privacy-link-zh-Hant" href="index.html?lang=zh-Hant">隱私權政策</a>。</p>
+    </article>
+
+    <article class="support" data-support="en" lang="en" hidden>
+      <h2>Contact</h2>
+      <p>If you need help with Quiet Fast, email <a href="mailto:yofeecai@gmail.com">yofeecai@gmail.com</a>.</p>
+      <p>To help diagnose the issue, include the app version, iOS version, what happened, and steps to reproduce it. Please do not send unnecessary health information or a complete data export.</p>
+
+      <h2>iCloud Sync</h2>
+      <p>Check iCloud sync in Settings → Data &amp; Security. Turning sync off does not delete records already stored on your device or in iCloud. When you turn it on again, the app resumes syncing through your private iCloud database.</p>
+
+      <h2>Reminders and Home Screen Widgets</h2>
+      <p>Manage reminders in Settings → Reminders. Notification permission can be changed in iOS Settings. Instructions for adding and configuring widgets are in Settings → Preferences → Home Screen Widgets.</p>
+
+      <h2>Import, Export, and Privacy</h2>
+      <p>Import and export tools are in Settings → Data &amp; Security. For details about storage, sync, and deletion, read the <a id="privacy-link-en" href="index.html?lang=en">Privacy Policy</a>.</p>
+    </article>
+
+    <footer>No analytics · No cookies · No tracking</footer>
+  </main>
+
+  <script>
+    const metadata = {
+      "zh-Hans": {
+        title: "帮助与支持",
+        meta: "开发者：YUFEI CAI"
+      },
+      "zh-Hant": {
+        title: "協助與支援",
+        meta: "開發者：YUFEI CAI"
+      },
+      "en": {
+        title: "Help & Support",
+        meta: "Developer: YUFEI CAI"
+      }
+    };
+
+    const buttons = [...document.querySelectorAll("[data-language]")];
+    const sections = [...document.querySelectorAll("[data-support]")];
+
+    function showLanguage(language) {
+      const selected = metadata[language] ? language : "zh-Hans";
+      document.documentElement.lang = selected;
+      document.title = `${metadata[selected].title} · Quiet Fast`;
+      document.querySelector("#page-title").textContent = metadata[selected].title;
+      document.querySelector("#page-meta").textContent = metadata[selected].meta;
+      buttons.forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.language === selected));
+      });
+      sections.forEach((section) => {
+        section.hidden = section.dataset.support !== selected;
+      });
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", selected);
+      window.history.replaceState({}, "", url);
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => showLanguage(button.dataset.language));
+    });
+
+    const queryLanguage = new URLSearchParams(window.location.search).get("lang");
+    const browserLanguage = navigator.language.startsWith("zh-Hant") || ["zh-TW", "zh-HK", "zh-MO"].includes(navigator.language)
+      ? "zh-Hant"
+      : navigator.language.startsWith("zh")
+        ? "zh-Hans"
+        : "en";
+    showLanguage(queryLanguage || browserLanguage);
+  </script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 Public legal information for 断时 / 斷時 / Quiet Fast.
 
 - Privacy policy: `index.html`
+- Help and support: `support.html`
 - Languages: Simplified Chinese, Traditional Chinese, English
 - Hosting: GitHub Pages
 - Analytics, cookies, and tracking: none
